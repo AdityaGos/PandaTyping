@@ -1,38 +1,130 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&family=Work+Sans:wght@200&display=swap');
+
+:root{
+    --bgColor:#333;
+    --textPrimary:#fff;
+    --textSecondary:#666;
+    --primaryColor:#fd4;
+
+}
+h1{
+   color:var(--primaryColor);
+}
+body{
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--bgColor);
+    color:var(--textPrimary);
+    font-size:1.5rem;
+    
+}
+.card-content{
+
+    font-family: 'Roboto mono', monospace;
+    margin:0 5px;
+    color:var(--textSecondary);
+
+}
+#header{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin :20px 22px 30px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+#buttons{
+    text-align: right;
+}
+button{
+    background-color: rgba(255,255,255,.2);
+    border:0;
+    color:rgba(255,255,255,.5);
+    padding:5px 20px;
+    border-radius:8px;
+    cursor:pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#info{
+    color:var(--primaryColor);
+}
+.card{
+    margin:30px;
+
+}
+div#game{
+    line-height: 35px;
+    height:105px;
+    overflow:hidden;
+    position:relative;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+#focus-error{
+    /* display: flex; */
+    position: absolute;
+    /* align-items: center; */
+    inset:0;
+    text-align: center;
+    padding:35px;
+
+
+}
+.card{
+    color:var(--textSecondary);
+    margin-left:250px;
+    margin-right: 250px;
+    
 }
 
-.App-link {
-  color: #61dafb;
+#game:focus #focus-error{
+    display:none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.result{
+    text-align:center;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.singleWord{
+    line-height: 1.2em;
+    margin: 0.15em;
+    border-bottom: 2px solid transparent;
+    
+}
+
+.input{
+    align-items: center;
+    text-align: center;
+}
+
+.input-inner{
+
+    background-color:white;
+    border-radius:12px;
+    width: 30%;
+    height:50px;
+    border:none;
+    font-family: 'Roboto mono', monospace;
+    font-size: 30px;
+    /* background: rgba(0,0,0,0.8); */
+    /* From https://css.glass */
+background:white;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+
+}
+
+
+#header{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.correct-word{
+    background-color:rgb(142, 245, 142);
+}
+.wrong-word{
+    background-color:rgb(242, 155, 155);
 }
